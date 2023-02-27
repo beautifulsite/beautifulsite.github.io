@@ -680,6 +680,9 @@ footer{
      background-color: black;
 }
 
+.forPhone{
+    display: none;
+}
 /***********************************************************************************************/
 
 
@@ -769,4 +772,29 @@ footer{
     left: 15%;
     right: 0;
     bottom: 0;
+}
+
+@media (max-width : 480px){
+    #forPc{
+        visibility: hidden;
+        display: none;
+    }
+    
+    .forPhone{
+        font-size: calc(var(--index) / 1);
+        height: 100%;
+        width: 100%;
+        visibility:visible;
+        display: inline-block;
+        white-space: nowrap;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+    
+    .forPhone span{
+        border-bottom: 1px solid white;
+    }
 }
