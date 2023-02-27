@@ -87,6 +87,11 @@ img:hover{
      transform: scale(1.05);
 }
 
+img:active{
+     filter: drop-shadow(0 0 1px red);
+     transform: scale(1.05);
+}
+
 .scale img:hover{
     filter: none;
     transform: none;
@@ -187,17 +192,13 @@ img:hover{
 
 .container [src="images/bg_cristal4.png"]{
    width: 100%;
+   height: 120%;
    margin: auto;
    position: absolute;
    top: 15%; left: 0; bottom: 0; right: 0;
     z-index: 3;
     pointer-events: none;
     
-}
-
-.container [src="images/bg_cristal4.png"]:hover{
-       filter: drop-shadow(0 0 1px red);
-     transform: scale(1.05);
 }
 
 
@@ -443,6 +444,12 @@ h1 img:hover{
      filter: drop-shadow(0 0 1px #D59D8F);
 }
 
+.interlude:active img{
+    transition: none;
+    transform: scale(1.01);
+     filter: drop-shadow(0 0 1px red);
+}
+
 .container [src="images/discord.png"]{
     width: 7%;
    margin: auto;
@@ -462,10 +469,23 @@ h1 img:hover{
     filter: drop-shadow(0 0 1px #D59D8F);
 }
 
+.container [src="images/discord.png"]:active{
+    transition: none;
+    transform: rotate(5deg);
+    filter: drop-shadow(0 0 1px red);
+}
+
 .container [src="images/tg.png"]:hover{
     transform: rotate(-5deg);
     filter: drop-shadow(0 0 1px #D59D8F);
 }
+
+.container [src="images/tg.png"]:active{
+    transition: none;
+    transform: rotate(-5deg);
+    filter: drop-shadow(0 0 1px red);
+}
+
 p.dis{
     font-family: 'Trajan Pro 3';
     text-align: center;
@@ -619,6 +639,11 @@ p.tg{
     cursor: pointer;
 }
 
+.text:active{
+    transition: none;
+    filter: drop-shadow(0 0 5px red);
+    cursor: pointer;
+}
 footer{
     height: 7%;
     position: relative;
@@ -676,6 +701,12 @@ footer p{
     transform: scale(1.03);
 }
 
+.hover:active + img{
+    transition: none;
+    filter: drop-shadow(0 0 5px red);
+    transform: scale(1.03);
+}
+
 footer{
      background-color: black;
 }
@@ -723,13 +754,8 @@ footer{
     z-index: 1;
     width: 600px;
     height: 500px;
-    background-image: url(../images/model_window.png);
-    background-size: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
     color: white;
     padding: 50px;
-    
 }
 
 .btn-close{
@@ -741,17 +767,32 @@ footer{
     right: 60px;
     top: 30px;
     opacity: .7;
+    z-index: 50;
 }
 .btn-close:hover{
     opacity: 1;
 }
 
+.modal-window img{
+    position: absolute;
+    width: 100%;
+    opacity: 0.85;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.modal-window img:hover{
+    transform: none;
+    filter: none;
+}
 .modal-window h1 img:first-child{
     position: absolute;
     width: 20%;
     left: 0;
     right: 0%;
     top: -60%;
+    z-index: 50;
 }
 .modal-window h1 img:last-child{
     position: absolute;
@@ -759,22 +800,32 @@ footer{
     left: 0;
     right: 0%;
     top: -50%;
+    z-index: 50;
 }
 
 .modal-window p{
     font-family: 'Wremena';
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: calc(var(--index) / 1.9);
+    color: whitesmoke;
     width: 70%;
     position: absolute;
     text-align: justify;
-    top: 43%;
+    top: 35%;
     left: 15%;
     right: 0;
+    padding-top: 5%;
     bottom: 0;
+    z-index: 50;
+    background: url(../images/modal_top_line.png), url(../images/modal_top_line.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, 50% 49%;
+    background-size: 90%;
 }
 
-@media (max-width : 480px){
+/*_______________________________MEDIA______________________________________________________________*/
+
+@media(max-width : 1365px){
     #forPc{
         visibility: hidden;
         display: none;
