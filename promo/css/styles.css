@@ -692,6 +692,41 @@ footer p{
     z-index: 4;
 }
 
+footer .rubin{
+    width: 2.5%;
+    left: 5.5%; 
+    position: absolute;
+    bottom: -160%;
+    z-index: 4;
+}
+
+footer .i1{
+    right: 3.5%;
+    width: 3%;
+    margin-left: 3em; 
+    position: absolute;
+    bottom: -137%;
+    z-index: 4;    
+}
+
+footer .i2{
+    right: 7.5%;
+    width: 3%;
+    margin-left: 3em; 
+    position: absolute;
+    bottom: -137%;
+    z-index: 4;    
+}
+
+footer .i3{
+    right: 11.5%;
+    width: 3%;
+    margin-left: 3em; 
+    position: absolute;
+    bottom: -137%;
+    z-index: 4;    
+}
+
 .hover + img{
     transition: .3s ease-in;
 }
@@ -776,7 +811,7 @@ footer{
 .modal-window img{
     position: absolute;
     width: 100%;
-    opacity: 0.85;
+    opacity: 0.93;
     left: 0;
     right: 0;
     top: 0;
@@ -804,7 +839,7 @@ footer{
 }
 
 .modal-window p{
-    font-family: 'Wremena';
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: calc(var(--index) / 1.9);
     color: whitesmoke;
