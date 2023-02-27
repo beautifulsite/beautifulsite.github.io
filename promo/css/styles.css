@@ -22,6 +22,42 @@
     font-style: normal;
   }
 
+@font-face {
+    font-family: 'Wremena';
+    src: url('Wremena-Light.eot');
+    src: local('Wremena Light'), local('Wremena-Light'),
+        url('Wremena-Light.eot?#iefix') format('embedded-opentype'),
+        url('Wremena-Light.woff2') format('woff2'),
+        url('Wremena-Light.woff') format('woff'),
+        url('Wremena-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wremena';
+    src: url('Wremena.eot');
+    src: local('Wremena'),
+        url('Wremena.eot?#iefix') format('embedded-opentype'),
+        url('Wremena.woff2') format('woff2'),
+        url('Wremena.woff') format('woff'),
+        url('Wremena.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wremena';
+    src: url('Wremena-Bold.eot');
+    src: local('Wremena Bold'), local('Wremena-Bold'),
+        url('Wremena-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Wremena-Bold.woff2') format('woff2'),
+        url('Wremena-Bold.woff') format('woff'),
+        url('Wremena-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 :root{
     --index: calc(1vw + 1vh);
 }
@@ -47,7 +83,7 @@ img{
 
 img:hover{
      animation: .3s ease-in;
-     filter: drop-shadow(0 0 1px red);
+     filter: drop-shadow(0 0 1px #D59D8F);
      transform: scale(1.05);
 }
 
@@ -102,7 +138,7 @@ img:hover{
 }
 
 .container [src="images/red_ray1.png"]{
-   width: 55%;
+   width: 50%;
    margin: auto;
    position: absolute;
    top: 0; left: 0; bottom: 0; right: 0;
@@ -403,7 +439,7 @@ h1 img:hover{
 
 .interlude img:hover{
     transform: scale(1.01);
-     filter: drop-shadow(0 0 1px red);
+     filter: drop-shadow(0 0 1px #D59D8F);
 }
 
 .container [src="images/discord.png"]{
@@ -422,12 +458,12 @@ h1 img:hover{
 
 .container [src="images/discord.png"]:hover{
     transform: rotate(5deg);
-    filter: drop-shadow(0 0 1px red);
+    filter: drop-shadow(0 0 1px #D59D8F);
 }
 
 .container [src="images/tg.png"]:hover{
     transform: rotate(-5deg);
-    filter: drop-shadow(0 0 1px red);
+    filter: drop-shadow(0 0 1px #D59D8F);
 }
 p.dis{
     font-family: 'Trajan Pro 3';
@@ -439,7 +475,7 @@ p.dis{
     top:17%;
     bottom: 0;
     left: 0;
-    right: 9.5%;
+    right: 9.2%;
     color: transparent;
     -webkit-background-clip: text;
 	background-clip: text;
@@ -494,8 +530,9 @@ p.tg{
 	background-clip: text;
 	background-image: linear-gradient(to right, #E79C8A 10%, #FFC4B5 30%, #FFAD98 70%, #E79C8A 100%);
     letter-spacing: calc(var(--index) / 7.5);
-    transition: 0.5s ease-in;
+    transition: 0.3s ease-in;
     z-index: 10;
+    border: 0;
 }
 
 .t1:hover{
@@ -575,13 +612,16 @@ p.tg{
 .t8:hover{
      transform: rotate(30deg);
 }
-.scale p:hover{
-    filter: drop-shadow(0 0 5px red);
+
+.text:hover{
+    filter: drop-shadow(0 0 5px #D59D8F);
+    cursor: pointer;
 }
 
 footer{
     height: 7%;
     position: relative;
+    background-color: black;
 }
 footer .f1{ 
     position: absolute;
@@ -595,7 +635,17 @@ footer .f1{
 footer .f2{ 
     position: absolute;
     width: 100%;
-    bottom: -200%;
+    bottom: -140%;
+    height: 200%;
+    left: 0;
+    z-index: 3;
+}
+
+footer .f3{ 
+    position: absolute;
+    width: 100%;
+    bottom: -167%;
+    height: 200%;
     left: 0;
     z-index: 3;
 }
@@ -621,10 +671,101 @@ footer p{
 }
 
 .hover:hover + img{
-    filter: drop-shadow(0 0 5px red);
+    filter: drop-shadow(0 0 5px #D59D8F);
     transform: scale(1.03);
 }
 
 footer{
      background-color: black;
+}
+
+/***********************************************************************************************/
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+}
+
+.modal.show{
+    visibility: visible;
+    z-index: 100;
+    opacity: 1;
+    transition: all .5s ease-out;
+}
+
+.modal .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .4;
+    z-index: 0;
+}
+
+.modal-window{
+    position: relative;
+    z-index: 1;
+    width: 600px;
+    height: 500px;
+    background-image: url(../images/model_window.png);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 50px;
+    
+}
+
+.btn-close{
+    border: none;
+    background: none;
+    color: lightgray; 
+    font-size: 20px;
+    position: absolute;
+    right: 60px;
+    top: 30px;
+    opacity: .7;
+}
+.btn-close:hover{
+    opacity: 1;
+}
+
+.modal-window h1 img:first-child{
+    position: absolute;
+    width: 20%;
+    left: 0;
+    right: 0%;
+    top: -60%;
+}
+.modal-window h1 img:last-child{
+    position: absolute;
+    width: 65%;
+    left: 0;
+    right: 0%;
+    top: -50%;
+}
+
+.modal-window p{
+    font-family: 'Wremena';
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 70%;
+    position: absolute;
+    text-align: justify;
+    top: 43%;
+    left: 15%;
+    right: 0;
+    bottom: 0;
 }

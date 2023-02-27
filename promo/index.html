@@ -19,27 +19,27 @@
      <img src="images/cristal_shadow3.png" alt="cristal_shadow">
      
      <div class="scale"> 
-     <div class="hover"><a href="#"><p class="t1 text">ПОПРОЩАЙСЯ</p></a></div>
+     <div class="hover"><button easy-toggle="#modalWin" easy-class="show" class="t1 text">ПОПРОЩАЙСЯ</button></div>
      <img src="images/1.png" alt="Осколок" class="image">
      
-     <div class="hover"><a href="#"><p class="t2 text">ИНТЕРЕСНОЕ</p></a></div>
+     <div class="hover"><button easy-toggle="#modalWin" easy-class="show" class="t2 text">ИНТЕРЕСНОЕ</button></div>
      <img src="images/2.png" alt="Осколок" class="image">
      
-      <div class="hover"><a href="#"><p class="t3 text">ОПИСАНИЕ</p></a></div>
+      <div class="hover"><button easy-toggle="#modalWin" easy-class="show" class="t3 text">ОПИСАНИЕ</button></div>
      <img src="images/3.png" alt="Осколок">
      
      <img src="images/4.png" alt="Осколок">
      
-     <div class="hover"><a href="#"><p class="t5 text">КТО МЫ</p></a></div>
+     <div class="hover"><button easy-toggle="#modalWin" easy-class="show" class="t5 text">КТО МЫ</button></div>
      <img src="images/5.png" alt="Осколок">
          
-     <div class="hover"><a href="#"><p class="t6 text">ИГРОКИ</p></a></div>
+     <div class="hover"><button easy-toggle="#modalWin" easy-class="show" class="t6 text">ИГРОКИ</button></div>
      <img src="images/6.png" alt="Осколок">
          
-     <div class="hover"><a href="#"><p class="t7 text">ДОНАТ</p></a></div>
+     <div class="hover"><button easy-toggle="#modalWin" easy-class="show" class="t7 text">ДОНАТ</button></div>
      <img src="images/7.png" alt="Осколок">
      
-     <div class="hover"><a href="#"><p class="t8 text">ПОДАРКИ</p></a></div>
+     <div class="hover"><button easy-toggle="#modalWin" easy-class="show" class="t8 text">ПОДАРКИ</button></div>
      <img src="images/8.png" alt="Осколок">
      </div>
      
@@ -82,12 +82,32 @@
          
      </div>
     </div>
-    
+<!---------------------------------------------------------------------------------------------->
     <footer>
         <img src="images/bg_shadow2.png" alt="bg_footer" class="f1">
         <p>МЫ СОЗДАЛИ НОВУЮ LINEAGE 2</p>
         <img src="images/footer.png" alt="bg_footer" class="f2">
+         <img src="images/footer.png" alt="bg_footer" class="f3">
     </footer>
+<!---------------------------------------------------------------------------------------------->
+   
+      <button easy-toggle="#modalWin" data-easy-class="show" >Купить</button>
+    <div id="modalWin" class="modal">
+        <div class="modal-window">
+            <button class="btn-close" easy-toggle="#modalWin" data-easy-class="show">X</button>
+            
+            <h1><img src="images/donat.png"><img src="images/na_servere_lt.png"></h1>
+            
+            <p>Пожертвование — дар, передача денег в пользу какой-либо организации или лица; а также добровольная оплата без принуждения, то есть оплата в благодарность за уже имеющуюся вещь или полученную услугу. 
+            <br><br>
+            Оплата услуг осуществляется на сайте и позже отправляется на ваш игровой аккаунт </p>
+        </div>
+        
+        <div class="overlay" easy-toggle="#modalWin" data-easy-class="show"></div>
     </div>
+      
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/easy-toggler@2.2.7"></script>
 </body>
 </html>
