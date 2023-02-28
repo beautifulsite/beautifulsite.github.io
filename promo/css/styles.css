@@ -405,6 +405,7 @@ h1 img{
    position: absolute;
    top: 60%; left: 0; bottom: 0; right: 0;
    z-index: 3;
+   pointer-events: none;
 }
 
 h1 img:hover{
@@ -418,12 +419,12 @@ h1 img:hover{
     position: relative;
     font-family: 'Trajan Pro 3';
     margin: auto;
-    top: 84%;
+    top: 85%;
     bottom: 0;
     left: 0;
     right: 0;
     width: 35%;
-    height: 20%;
+    height: 10%;
     z-index: 2;
 }
 
@@ -432,7 +433,7 @@ h1 img:hover{
     position: absolute;
     margin: auto;
     width: 75%;
-    top: -42%;
+    top: -10%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -866,21 +867,137 @@ footer{
         display: none;
     }
     
+    body{
+        background-color:  #1A1A1A;
+         position: relative;
+    }
     .forPhone{
-        font-size: calc(var(--index) / 1);
+        font-size: calc(var(--index) / 0.7);
         height: 100%;
         width: 100%;
         visibility:visible;
-        display: inline-block;
-        white-space: nowrap;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
+        display: block;
+        position: relative;
     }
     
-    .forPhone span{
-        border-bottom: 1px solid white;
+    .forPhone .logo_phone{
+        display: inline-block;
+        position: absolute;
+        top: -45%;bottom: 0;right: 0;left: 0;
+        margin: auto;
+        width: 99%;
+        opacity: 0.9;
     }
+    
+    .forPhone p.p1{
+        display: inline-block;
+        position: absolute;
+        top: 42.5%;bottom: 0;right: 0;left: 0;
+        margin: auto;
+        font-family: 'Montserrat', sans-serif;
+        white-space: nowrap;
+        color: white;
+        padding-top: 1.1em;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.8em;
+        
+        background: url(../images/linePhone.png) top center no-repeat;
+    }
+    
+     .forPhone p.p2{
+        display: inline-block;
+        position: absolute;
+        top: 49%;bottom: 0;right: 0;left: 0;
+        margin: auto;
+        font-family: 'Montserrat', sans-serif;
+        white-space: nowrap;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.6em;
+        background: url(../images/linePhone.png) 50% 20% no-repeat;
+    }
+    
+    .forPhone .logo_dis{
+        display: inline-block;
+        position: absolute;
+        width: 15%;
+        top: 37%;bottom: 0;right: 30%;left: 0;
+        margin: auto;
+        opacity: 0.8;
+        padding-bottom: 1.5em;
+    }
+     .forPhone .logo_tg{
+        display: inline-block;
+        position: absolute;
+        width: 15%;
+        top: 37%;bottom: 0;right: 0;left: 30%;
+        margin: auto;
+        opacity: 0.8;
+        padding-bottom: 1.5em;
+    }
+    
+    .forPhone .logo_phone_hover:hover{
+        opacity: 1;
+        transition: none;
+        transform: none;
+        filter: none;
+    }
+    
+     .forPhone .text_dis_phone{
+        font-size: calc(var(--index) / 0.8);
+        display: inline-block;
+        position: absolute;
+        top: 71.8%;bottom: 0;right: 30%;left: 0;
+        margin: auto;
+        font-family: 'Montserrat', sans-serif;
+        white-space: nowrap;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    .forPhone .text_tg_phone{
+        font-size: calc(var(--index) / 0.8);
+        display: inline-block;
+        position: absolute;
+        top: 71.8%;bottom: 0;right: 0;left: 30%;
+        margin: auto;
+        font-family: 'Montserrat', sans-serif;
+        white-space: nowrap;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+      .forPhone p.p3{
+        font-size: calc(var(--index) / 0.8);
+        display: inline-block;
+        position: absolute;
+        top: 80%;bottom: 0;right: 0;left: 0;
+        margin: auto;
+        font-family: 'Montserrat', sans-serif;
+        white-space: nowrap;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.2em;
+    }
+    
+    .forPhone p.p4{
+        font-size: calc(var(--index) / 1.3);
+        display: inline-block;
+        position: absolute;
+        top: 96%;bottom:0;right: 0;left: 0;
+        margin: 0 auto;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.6em;
+        opacity: 0.3;
+    }
+    
+    
 }

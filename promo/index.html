@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>INTERLUDE+</title>
-    <link rel="shortcut icon" href="images/rubin.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link href="css/styles.css" rel="stylesheet">
     
-    <script>footer.scrollIntoView(bottom)</script>
     <script src="https://cdn.jsdelivr.net/npm/easy-toggler@2.2.7" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body onload="init()">
            <div class="wrapper" id="forPc">
@@ -122,81 +122,20 @@
         <div class="overlay" easy-toggle="#modalWin" data-easy-class="show"></div>
     </div>
       
-    
-    <div class="forPhone"><p>Сайт можно посмотреть <span>только</span> с компьютера!</p></div>
     </div>
-    
-    
-    
-    
-    
-    <script>function init(){
-	new SmoothScroll(document,120,12)
-}
-
-function SmoothScroll(target, speed, smooth) {
-	if (target === document)
-		target = (document.scrollingElement 
-              || document.documentElement 
-              || document.body.parentNode 
-              || document.body) // cross browser support for document scrolling
-      
-	var moving = false
-	var pos = target.scrollTop
-  var frame = target === document.body 
-              && document.documentElement 
-              ? document.documentElement 
-              : target // safari is the new IE
-  
-	target.addEventListener('mousewheel', scrolled, { passive: false })
-	target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
-
-	function scrolled(e) {
-		e.preventDefault(); // disable default scrolling
-
-		var delta = normalizeWheelDelta(e)
-
-		pos += -delta * speed
-		pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
-
-		if (!moving) update()
-	}
-
-	function normalizeWheelDelta(e){
-		if(e.detail){
-			if(e.wheelDelta)
-				return e.wheelDelta/e.detail/40 * (e.detail>0 ? 1 : -1) // Opera
-			else
-				return -e.detail/3 // Firefox
-		}else
-			return e.wheelDelta/120 // IE,Safari,Chrome
-	}
-
-	function update() {
-		moving = true
-    
-		var delta = (pos - target.scrollTop) / smooth
-    
-		target.scrollTop += delta
-    
-		if (Math.abs(delta) > 0.5)
-			requestFrame(update)
-		else
-			moving = false
-	}
-
-	var requestFrame = function() { // requestAnimationFrame cross browser
-		return (
-			window.requestAnimationFrame ||
-			window.webkitRequestAnimationFrame ||
-			window.mozRequestAnimationFrame ||
-			window.oRequestAnimationFrame ||
-			window.msRequestAnimationFrame ||
-			function(func) {
-				window.setTimeout(func, 1000 / 50);
-			}
-		);
-	}()
-}</script>
+    <div class="forPhone">
+            <a href="#" target="_blank"><img src="images/logo_phone.png" class="logo_phone logo_phone_hover"></a>
+            <p class="p1"><strong>Мы создали новую lineage 2</strong></p>
+            <p class="p2">Лучший interlude+ на клиенте <br>classic!</p>
+            
+            <a href="https://discord.gg/legendtown" target="_blank"><img src="images/dis_phone.png" class="logo_dis logo_phone_hover"></a>
+            <p class="text_dis_phone"><strong>discord</strong></p>
+            <a  href="https://t.me/legendtown" target="_blank"><img src="images/tg_phone.png" class="logo_tg logo_phone_hover"></a>
+            <p class="text_tg_phone"><strong>Telegram</strong></p>
+         
+            <p class="p3">Следите за новостями<br>Вместе с нами!</p>
+            
+            <p class=p4>Чтобы увидеть все краски проекта - заходите на сайт с компьютера!</p>
+    </div>
 </body>
 </html>
