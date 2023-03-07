@@ -826,21 +826,20 @@ footer{
     transform: none;
     filter: none;
 }
-.modal-window h1 img:first-child{
+
+.modal-window h1{
+    font-size: calc(var(--index) / 0.7);
+    font-weight: 100;
     position: absolute;
-    width: 20%;
-    left: 0;
-    right: 0%;
-    top: -60%;
+    left: 15%;
+    top: 13%;
     z-index: 50;
-}
-.modal-window h1 img:last-child{
-    position: absolute;
-    width: 65%;
-    left: 0;
-    right: 0%;
-    top: -50%;
-    z-index: 50;
+    text-align: center;
+    
+    background-image: linear-gradient(to bottom, #E39952, #F0CA92);
+     color: transparent;
+     background-clip: text;
+     -webkit-background-clip: text;
 }
 
 .modal-window p{
@@ -1091,3 +1090,13 @@ footer{
     
     
 }
+
+
+
+
+
+
+
+
+
+/*surprizze*/
