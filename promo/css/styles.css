@@ -684,8 +684,7 @@ footer img:hover{
 
 footer p{
    font-size: calc(var(--index) / 1);
-    padding-left: 3em;
-    margin-left: 3em; 
+    padding-left: 2.7em;
     color: white;
     font-family: 'Montserrat', sans-serif;
     position: absolute;
@@ -695,7 +694,7 @@ footer p{
 
 footer .rubin{
     width: 2.5%;
-    left: 5.5%; 
+    left: 1%; 
     position: absolute;
     bottom: -160%;
     z-index: 4;
