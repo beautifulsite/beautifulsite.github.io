@@ -92,20 +92,19 @@
 <!---------------------------------------------------------------------------------------------->
     <footer>
         <img src="images/bg_shadow2.png" alt="bg_footer" class="f1">
-        <p>МЫ СОЗДАЛИ НОВУЮ LINEAGE 2</p>
+        <p>ЧУВСТВУЕШЬ? МЫ СОЗДАЛИ НОВУЮ LINEAGE 2</p>
         <img src="images/footer.png" alt="bg_footer" class="f2">
          <img src="images/footer.png" alt="bg_footer" class="f3">
          
          
          <img src="images/rubin.png" alt="bg_footer" class="rubin">
          
-         <button><img src="images/icon1.png" alt="bg_footer" class="i3"></button>
+         <button easy-toggle="#modalInfo2" easy-class="show"><img src="images/icon1.png" alt="bg_footer" class="i3"></button>
          <button><img src="images/icon2.png" alt="bg_footer" class="i2"></button>
-         <button><img src="images/icon3.png" alt="bg_footer" class="i1"></button>
+        <button easy-toggle="#modalInfo" easy-class="show"><img src="images/icon3.png" alt="bg_footer" class="i1"></button>
     </footer>
-<!---------------------------------------------------------------------------------------------->
+<!------------------------------MODAL WINDOWS---------------------------------------------------------------->
    
-      <button easy-toggle="#modalWin" data-easy-class="show" >Купить</button>
     <div id="modalWin" class="modal">
         <div class="modal-window">
              <img src="images/model_window.png">
@@ -121,7 +120,26 @@
         
         <div class="overlay" easy-toggle="#modalWin" data-easy-class="show"></div>
     </div>
-      
+    
+       <div id="modalInfo" class="modal modalInfo1">
+        <div class="modal-window modalInfoWin">
+             <img src="images/iconInfo.png">
+            <p><span class="gradient">Уже сейчас идут бурные обсуждения, появляются первые скрины и информация! Заходи в Дискорд и Телеграм!</span></p>
+        </div>
+        
+        <div class="overlay" easy-toggle="#modalInfo" data-easy-class="show"></div>
+       </div>
+    
+        <div id="modalInfo2" class="modal modalInfo1 modalInfo2">
+            <div class="modal-window modalInfoWin">
+                 <img src="images/iconInfo.png">
+                <p><span class="gradient">Сидят две бабульки.<br> Одна у другой спрашивает: <br>-Как меня зовут? <br>Другая долго думает и спрашивает: <br>-Тебе срочно?</span></p>
+            </div>
+
+            <div class="overlay" easy-toggle="#modalInfo2" data-easy-class="show"></div>
+        </div>
+    
+<!------------------------------------------------------------------------------------------->
     </div>
     <div class="forPhone">
             <a href="#" target="_blank"><img src="images/logo_phone.png" class="logo_phone logo_phone_hover"></a>

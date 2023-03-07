@@ -702,7 +702,7 @@ footer .rubin{
 }
 
 footer .i1{
-    right: 3.5%;
+    right: 6.5%;
     width: 3%;
     margin-left: 3em; 
     position: absolute;
@@ -711,7 +711,7 @@ footer .i1{
 }
 
 footer .i2{
-    right: 7.5%;
+    right: 10.5%;
     width: 3%;
     margin-left: 3em; 
     position: absolute;
@@ -720,7 +720,7 @@ footer .i2{
 }
 
 footer .i3{
-    right: 11.5%;
+    right: 14.5%;
     width: 3%;
     margin-left: 3em; 
     position: absolute;
@@ -750,7 +750,11 @@ footer{
 .forPhone{
     display: none;
 }
-/***********************************************************************************************/
+
+.i1, .i2, .i3{
+    cursor: pointer;
+}
+/*******************************************MODAL INFO****************************************************/
 
 
 .modal{
@@ -858,6 +862,92 @@ footer{
     background-position: top center, 50% 49%;
     background-size: 90%;
 }
+
+
+/*_____________________________ICON_MODAL_INFO___________________________________________*/
+
+.modalInfo1{
+    position: fixed;
+    top: 29%;
+    left: 42%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+}
+
+.modal.show{
+    visibility: visible;
+    z-index: 100;
+    opacity: 1;
+    transition: all .5s ease-out;
+}
+
+.modal .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    z-index: 0;
+}
+
+.modalInfoWin{
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    height: 120px;
+    color: white;
+    padding: 50px;
+}
+
+.modalInfoWin p{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: calc(var(--index) / 2.3);
+    width: 90%;
+    line-height: calc(var(--index) / 1.4);
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    left: 5%;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    background: none;
+}
+
+.gradient{
+    background-image: linear-gradient(to right, #DE9380, #FAB097);
+     color: transparent;
+     background-clip: text;
+     -webkit-background-clip: text;
+}
+
+.modalInfo2{
+    position: fixed;
+    top: 29%;
+    left: 34%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+}
+
+.modalInfo2 p{
+    top: 10%;
+}
+
 
 /*_______________________________MEDIA______________________________________________________________*/
 
