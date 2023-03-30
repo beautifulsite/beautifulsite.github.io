@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas test</title>
+    
+    <style>
+    canvas{
+    border: 1px dashed black;    
+    }
+    
+    .clear{
+        display: block;
+        width: 200px;
+        height: 40px;
+        margin-left: 200px;
+    }
+        
+        .toolbar{
+            padding: 40px;
+            border: 1px solid black;
+            margin: 20px;
+            width: 100px;
+            text-align: center;
+        }
+        #red{
+            color: red;
+        }
+        
+        #blue{
+            color: blue;
+        }
+        
+        #green{
+            color: green;
+        }
+    </style>
+    
+    <script>
+    let canvas;
+    let context;
+    window.onload = function() {
+         canvas = document.getElementById("drawingCanvas");
+         context = canvas.getContext("2d");
+        
+        canvas.onmousedown = startDrawing;
+        canvas.onmouseup = stopDrawing;
+        canvas.onmouseout = stopDrawing;
+        canvas.onmousemove = draw;
+       
+    };
+        
+       var isDrawing = false;
+
+function startDrawing(e) {
+  // Start drawing.
+  isDrawing = true;
+
+  // Create a new path (with the current stroke color and stroke thickness).
+  context.beginPath();
+
+  // Put the pen down where the mouse is positioned.
+  context.moveTo(e.pageX - canvas.offsetLeft, e.pageY - canvas.offsetTop);
+}
+
+function stopDrawing() {
+  isDrawing = false;
+}
+
+function draw(e) {
+  if (isDrawing == true) {
+    // Find the new position of the mouse.
+    var x = e.pageX - canvas.offsetLeft;
+    var y = e.pageY - canvas.offsetTop;
+
+    // Draw a line to the new position.
+    context.lineTo(x, y);
+    context.stroke();	
+  }
+}
+        
+        
+function clearCanvas(){
+    context.clearRect(0, 0, canvas.width, canvas.height);
+};
+        
+function changeColor(color) {
+// Меняем текущий цвет рисования.
+context.strokeStyle = color;
+}
+
+    </script>
+</head>
+<body>
+    <div class="toolbar">-Pen color-<br> <span id="red" onclick="changeColor('rgb(255, 0, 0)')">red</span> <span id="blue" onclick="changeColor('rgb(0, 0, 255)')">blue</span> <span id="green" onclick="changeColor('rgb(0, 255, 0)')">green</span></div>
+    <canvas id="drawingCanvas" width="600" height="400"></canvas>
+    <button class="clear" onclick="clearCanvas()">clear</button>
+</body>
+</html>
